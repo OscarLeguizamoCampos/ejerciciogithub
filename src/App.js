@@ -1,5 +1,8 @@
-import logo from "./logo.svg";
-import "./App.css";
+import logo from "./media/logo.png";
+import "./styles/App.css";
+
+import borderCollie from './media/borderCollie.jpg';
+import rhodesian from './media/rhodesian.jpg';
 
 function App() {
   return (
@@ -7,7 +10,7 @@ function App() {
       <header>
         <ul class="navbar">
           <li>
-            <img src="./media/logo.png" alt="imagen" class="logo" />
+            <img src={logo} alt="imagen" class="logo" />
           </li>
           <li>
             <button class="botonGenerico mainButton">Nuevo post</button>
@@ -29,19 +32,11 @@ function App() {
       <main>
         <section>
           <h1>Razas de Perros</h1>
-          <ul class="breedCardContainer">
-            <li class="breedCard">
-              <div class="contenedorImagen">
-                <img src="./media/borderCollie.jpg" alt="Border Collie" />
-              </div>
-              <span class="breedTitle">Border Collie </span>
-            </li>
-            <li class="breedCard">
-              <div class="contenedorImagen">
-                <img src="./media/rhodesian.jpg" alt="Border Collie" />
-              </div>
-              <span class="breedTitle">Rhodesian</span>
-            </li>
+          <ul class="breedCardContainer backgroundColor">
+            <CardRazasPerros nombreRaza = "BorderCollie" imagen = {borderCollie} color = "backgroundRojo"/>
+            <CardRazasPerros nombreRaza = "Rhodesian" imagen = {rhodesian} color = "backgroundVerde" />
+ 
+ 
           </ul>
         </section>
         <section></section>
@@ -50,5 +45,22 @@ function App() {
     </div>
   );
 }
+
+function CardRazasPerros({nombreRaza, imagen, color}){
+  return(
+    
+    <li class="breedCard">
+      <div className = {color}> 
+        <div class="contenedorImagen">
+          <img src={imagen} alt={nombreRaza} />
+        </div>
+        <span class="breedTitle">{nombreRaza}</span>
+      </div> 
+    </li>
+   
+  )
+}
+
+
 
 export default App;
