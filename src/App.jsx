@@ -5,7 +5,7 @@ import RhodesianPageInfo from 'pages/rhodesian';
 
 import {
   BrowserRouter as Router,
-  
+  Switch,
   
   Route
 } from 'react-router-dom';
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        
+         <Switch>
           <Route path = '/rhodesian'>
             <RhodesianPageInfo />
           </Route>
@@ -22,11 +22,11 @@ function App() {
           <Route path = '/'>
             <Index />
           </Route>
-          
+         </Switch>  
          
       </Router>
 
     </div>
   );
 }
-export default App()
+export default App;
