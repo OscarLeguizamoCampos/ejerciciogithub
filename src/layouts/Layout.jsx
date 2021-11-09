@@ -1,9 +1,6 @@
 import Footer from "components/Footer"
 import Header from "components/Header"
 
- 
-
- 
 
 const Layout = ({children}) => {
     return (
@@ -14,6 +11,7 @@ const Layout = ({children}) => {
             </main>
         <Footer />
         </div>
+
     )
 }
 

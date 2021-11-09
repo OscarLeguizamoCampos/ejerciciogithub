@@ -1,27 +1,36 @@
 import CardRazasPerros from "components/CardRazasPerros";
 
 import borderCollie from 'media/borderCollie.jpg';
-import rhodesian from 'media/rhodesian.jpg';
-import Header from 'components/Header';
-import Footer from 'components/Footer'
+import rhodesian from 'media/rhodesian.jpg'
+ 
 
-function Index() {
+const Index = () => {
     return (
     <div>
-      <Header />
-      <main>
+      <>
+       
         <section>
           <h1>Razas de Perros</h1>
-          <ul class="breedCardContainer backgroundColor">
+          <ul className ="breedCardContainer  ">
             <CardRazasPerros nombreRaza = "BorderCollie" imagen = {borderCollie} ruta = '/borderCollie'/>
-            <CardRazasPerros nombreRaza = "Rhodesian" imagen = {rhodesian}  ruta = '/rhodesian' />
- 
- 
+            <CardRazasPerros nombreRaza = "Rhodesian" imagen = {rhodesian}  ruta = '/rhodesian' /> 
+            <CardRazasPerros nombreRaza = "BorderCollie" imagen = {borderCollie} ruta = '/borderCollie'/>
+            <CardRazasPerros nombreRaza = "Rhodesian" imagen = {rhodesian}  ruta = '/rhodesian' />             
+            <CardRazasPerros nombreRaza = "Rhodesian" imagen = {rhodesian}  ruta = '/rhodesian' />             
+            <CardRazasPerros nombreRaza = "Rhodesian" imagen = {rhodesian}  ruta = '/rhodesian' />             
+            
           </ul>
+
+
+
+
+
+
+
         </section>
         <section></section>
-      </main>
-      <Footer />
+       
+      </>
     </div>
     )
 }

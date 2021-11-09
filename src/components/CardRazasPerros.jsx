@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const CardRazasPerros = ({nombreRaza, imagen, ruta }) =>{
-    return(
+    return( 
       <Link to = {ruta}>
       <li class="breedCard">       
           <div class="contenedorImagen">
